@@ -1,0 +1,40 @@
+.hero {
+  background-image: url(../assets/hero-background.png);
+  background-size: 130% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  height: 948px;
+
+  header {
+    max-width: 1120px;
+    margin-inline: auto;
+    padding-top: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .button {
+      display: flex;
+      align-items: center;
+      padding: 0px 20px;
+      height: 40px;
+
+      background: var(--pink-dark);
+      border-radius: 8px;
+    }
+  }
+
+  div {
+    max-width: 656px;
+    margin-inline: auto;
+    text-align: center;
+    padding-top: 164px;
+
+    p {
+      max-width: 465px;
+      padding-top: 32px;
+      margin-inline: auto;
+    }
+  }
+}

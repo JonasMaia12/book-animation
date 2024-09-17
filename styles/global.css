@@ -43,19 +43,27 @@
   --tag: bold 0.625rem var(--font-family);
 }
 
+html {
+  background-color: var(--shape-background);
+}
+
 h1 {
   font: var(--title-lg);
+  color: var(--text-title);
 }
 
 h2 {
   font: var(--title-md);
+  color: var(--text-title);
 }
 
 p {
   font: var(--body-md);
+  color: var(--text-label);
 }
 
 a {
-  color: inherit;
+  color: var(--text-title);
   text-decoration: none;
+  font: var(--button);
 }
