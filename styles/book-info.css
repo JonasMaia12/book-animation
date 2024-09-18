@@ -1,0 +1,71 @@
+.book-info {
+  height: 1586px;
+
+  .title {
+    max-width: 450px;
+    margin-inline: auto;
+    padding-top: 235px;
+    display: flex;
+    gap: 1rem;
+  }
+
+  p {
+    max-width: 450px;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .book {
+    display: flex;
+    justify-content: center;
+    padding-block: 222px;
+    position: relative;
+
+    .pin-with-text {
+      position: absolute;
+      top: 15%;
+      left: 19%;
+      z-index: 2;
+    }
+
+    .pin {
+      position: absolute;
+      bottom: 12%;
+      left: 20%;
+      z-index: 2;
+    }
+
+    .book-main {
+      width: 467px;
+      height: 617px;
+      z-index: 3;
+    }
+
+    .bookmark-yellow {
+      width: 172px;
+      height: 536px;
+      rotate: 10deg;
+      position: absolute;
+      top: 13%;
+      right: 26%;
+      z-index: 2;
+    }
+
+    .bookmark-purple {
+      width: 172px;
+      height: 536px;
+      rotate: 18deg;
+      position: absolute;
+      top: 25%;
+      right: 19%;
+      z-index: 1;
+    }
+
+    .book-mark-text {
+      position: absolute;
+      bottom: 10%;
+      right: 22%;
+      z-index: 1;
+    }
+  }
+}

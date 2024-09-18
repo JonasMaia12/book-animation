@@ -1,0 +1,87 @@
+.price {
+  max-width: 1050px;
+  margin-inline: auto;
+
+  .title {
+    max-width: 294px;
+    margin-inline: auto;
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 56px;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 300px;
+
+    .card {
+      background: var(--shape-hover);
+      padding: 32px;
+      border-radius: 24px;
+
+      .head {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+          font: var(--title-xs);
+          color: var(--pink-light);
+        }
+
+        span {
+          font: var(--tag);
+          color: var(--text-body);
+          display: flex;
+          justify-content: center;
+          padding: 9px 20px;
+          width: 90px;
+          background: var(--shape-stroke);
+          border-radius: 999px;
+        }
+      }
+
+      .price-tag {
+        padding-top: 24px;
+        padding-bottom: 70px;
+
+        span {
+          font: var(--title-xs);
+        }
+
+        p {
+          font: var(--body-sm);
+          color: var(--text-label);
+        }
+      }
+
+      .list {
+        font: var(--body-xs);
+        color: var(--text-body);
+        padding-bottom: 24px;
+        list-style: none;
+
+        li::before {
+          content: "";
+          background: url(../assets/icons/star.svg);
+          background-repeat: no-repeat;
+          background-size: 100%;
+          display: inline-block;
+          width: 14px;
+          height: 14px;
+        }
+      }
+
+      .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 224px;
+        height: 40px;
+
+        background: #7d298a;
+        border-radius: 8px;
+      }
+    }
+  }
+}
