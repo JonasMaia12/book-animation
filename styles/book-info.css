@@ -21,17 +21,56 @@
     padding-block: 222px;
     position: relative;
 
+    &:hover {
+      .pin-with-text {
+        top: 15%;
+        left: 19%;
+        transition: all;
+        transition-duration: 1s;
+      }
+
+      .pin {
+        bottom: 12%;
+        left: 20%;
+        transition: all;
+        transition-duration: 1s;
+      }
+
+      .bookmark-yellow {
+        top: 13%;
+        right: 26%;
+        rotate: 10deg;
+        transition: all;
+        transition-duration: 1s;
+      }
+
+      .bookmark-purple {
+        top: 25%;
+        right: 19%;
+        rotate: 18deg;
+        transition: all;
+        transition-duration: 1s;
+      }
+
+      .book-mark-text {
+        bottom: 10%;
+        right: 22%;
+        transition: all;
+        transition-duration: 1s;
+      }
+    }
+
     .pin-with-text {
       position: absolute;
-      top: 15%;
-      left: 19%;
+      top: 30%;
+      left: 40%;
       z-index: 2;
     }
 
     .pin {
       position: absolute;
-      bottom: 12%;
-      left: 20%;
+      bottom: 20%;
+      left: 40%;
       z-index: 2;
     }
 
@@ -44,28 +83,28 @@
     .bookmark-yellow {
       width: 172px;
       height: 536px;
-      rotate: 10deg;
+      rotate: 0deg;
       position: absolute;
-      top: 13%;
-      right: 26%;
+      top: 25%;
+      right: 35%;
       z-index: 2;
     }
 
     .bookmark-purple {
       width: 172px;
       height: 536px;
-      rotate: 18deg;
+      rotate: 0deg;
       position: absolute;
       top: 25%;
-      right: 19%;
+      right: 35%;
       z-index: 1;
     }
 
     .book-mark-text {
       position: absolute;
-      bottom: 10%;
-      right: 22%;
-      z-index: 1;
+      bottom: 25%;
+      right: 35%;
+      z-index: 2;
     }
   }
 }

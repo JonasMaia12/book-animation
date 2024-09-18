@@ -2,6 +2,28 @@
   max-width: 1050px;
   margin-inline: auto;
 
+  &:hover {
+    .cards {
+      .card {
+        &.mensal {
+          rotate: -10deg;
+          top: 7%;
+          left: 10%;
+          transition: all;
+          transition-duration: 1s;
+        }
+
+        &.anual {
+          rotate: 10deg;
+          top: 7%;
+          right: 10%;
+          transition: all;
+          transition-duration: 1s;
+        }
+      }
+    }
+  }
+
   .title {
     max-width: 294px;
     margin-inline: auto;
@@ -14,11 +36,19 @@
     display: flex;
     justify-content: center;
     padding-bottom: 300px;
+    position: relative;
 
     .card {
       background: var(--shape-hover);
       padding: 32px;
       border-radius: 24px;
+      z-index: 2;
+      height: 416px;
+      width: 288px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 2px solid var(--shape-hover);
 
       .head {
         display: flex;
@@ -43,7 +73,6 @@
 
       .price-tag {
         padding-top: 24px;
-        padding-bottom: 70px;
 
         span {
           font: var(--title-xs);
@@ -58,17 +87,15 @@
       .list {
         font: var(--body-xs);
         color: var(--text-body);
-        padding-bottom: 24px;
         list-style: none;
+        display: grid;
+        gap: 12px;
+        padding-bottom: 24px;
 
-        li::before {
-          content: "";
-          background: url(../assets/icons/star.svg);
-          background-repeat: no-repeat;
-          background-size: 100%;
-          display: inline-block;
-          width: 14px;
-          height: 14px;
+        li {
+          background: url(../assets/icons/star.svg) no-repeat;
+          background-size: 14px;
+          padding-left: 1.5rem;
         }
       }
 
@@ -79,8 +106,45 @@
         width: 224px;
         height: 40px;
 
-        background: #7d298a;
+        background: --pink-dark;
         border-radius: 8px;
+      }
+
+      &.mensal,
+      &.anual {
+        background: var(--shape-base);
+        z-index: 1;
+        position: absolute;
+
+        .head {
+          p {
+            color: var(--blue-light);
+          }
+        }
+
+        .list {
+          li {
+            background: url(../assets/icons/star-blue.svg) no-repeat;
+            background-size: 14px;
+            padding-left: 1.5rem;
+          }
+        }
+
+        .button {
+          background: var(--blue-dark);
+        }
+      }
+
+      &.mensal {
+        rotate: 0deg;
+        top: 0%;
+        left: 36%;
+      }
+
+      &.anual {
+        rotate: 0deg;
+        top: 0%;
+        right: 36%;
       }
     }
   }

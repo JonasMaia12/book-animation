@@ -1,10 +1,20 @@
 .hero {
-  background-image: url(../assets/hero-background.png);
-  background-size: 130% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-
   height: 948px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/hero-background.png);
+    background-size: 130% 100%;
+    background-position: center;
+    z-index: -1;
+    opacity: 0;
+    animation: appear 4s both;
+  }
 
   header {
     max-width: 1120px;
@@ -19,9 +29,34 @@
       align-items: center;
       padding: 0px 20px;
       height: 40px;
+      width: 89px;
 
       background: var(--pink-dark);
       border-radius: 8px;
+
+      position: relative;
+
+      &:hover::before {
+        scale: 1;
+      }
+
+      &::before {
+        content: "";
+
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+
+        background: rgb(255 255 255 / 0.2);
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+
+        scale: 0;
+        transition: scale 300ms;
+      }
     }
   }
 
@@ -30,11 +65,22 @@
     margin-inline: auto;
     text-align: center;
     padding-top: 164px;
+    opacity: 0;
+    animation: appear 5s 900ms both;
 
     p {
       max-width: 465px;
       padding-top: 32px;
       margin-inline: auto;
+
+      opacity: 0;
+      animation: appear 600ms 800ms both;
     }
+  }
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
   }
 }
